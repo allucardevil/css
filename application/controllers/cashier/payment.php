@@ -82,7 +82,7 @@ class Payment extends CI_Controller {
 				$actual_weight = $actual_weight + $ow->wow_actual_weight;
 				$paid_weight = $paid_weight + $ow->wow_paid_weight;
 			}
-			
+			$data['paid_weight'] = $paid_weight;
 			foreach($rental_rates as $rr)
 			{
 				$data['min_day'] = $rr->wrr_min_day;
