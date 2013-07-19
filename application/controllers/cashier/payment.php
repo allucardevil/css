@@ -128,12 +128,12 @@ class Payment extends CI_Controller {
 			$data['actual_weight'] = $actual_weight;
 			$data['paid_weight'] = $paid_weight;
 			
-			$this->load->view('template/header');
-			$this->load->view('template/sidebar', $data);
-			$this->load->view('template/breadcumb');
-			if ($type == 'outgoing'){$this->load->view('cashier/payment_receipt_outgoing_form',$data);}
-			if ($type == 'incoming'){$this->load->view('cashier/payment_receipt_incoming_form',$data);}
-			$this->load->view('template/footer');
+			$this->load->view('template/css_header');
+			$this->load->view('cashier/css/payment_receipt_outgoing_form',$data);
+			$this->load->view('template/css_menubar');
+			$this->load->view('template/css_footer');
+			
+			//$this->load->view('template/footer');
 		
 	}
 	
